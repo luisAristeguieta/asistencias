@@ -14,8 +14,8 @@ public class ServicioEstudiantes {
 	// no permite duplicados
 	public void agregar(Estudiante estudiante) {
 		Estudiante encontrado = buscarPorCedula(estudiante.getCedula());
-		if (encontrado != null) {
-			estudiantes.add(encontrado);
+		if (encontrado == null) {
+			estudiantes.add(estudiante);
 		}
 	}
 
